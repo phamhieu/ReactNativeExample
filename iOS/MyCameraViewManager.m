@@ -16,6 +16,8 @@
 #import "RCTSparseArray.h"
 #import "RCTEventDispatcher.h"
 
+#import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+
 @implementation RCTConvert (MyCameraView)
 RCT_ENUM_CONVERTER(CameraType, (@{@"camera-front": @(CameraTypeFront),
                                   @"camera-back": @(CameraTypeBack)}),
@@ -34,12 +36,11 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
 
 - (void)toggleCamera:(int)camType reactTag:(NSNumber *)reactTag{
     RCT_EXPORT();
-    //RCTLogInfo(@"Pretending to create an event %d reactTag: %d", (int)camType, reactTag.intValue);
     
     [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
         id view = viewRegistry[reactTag];
         if (![view isKindOfClass:[MyCameraView class]]) {
-            RCTLogError(@"Invalid view returned from registry, expecting RKWebView, got: %@", view);
+            RCTLogError(@"Invalid view returned from registry, expecting MyCameraView, got: %@", view);
         }
         [view toggleCamera:camType];
     }];
@@ -51,7 +52,7 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
     [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
         id view = viewRegistry[reactTag];
         if (![view isKindOfClass:[MyCameraView class]]) {
-            RCTLogError(@"Invalid view returned from registry, expecting RKWebView, got: %@", view);
+            RCTLogError(@"Invalid view returned from registry, expecting MyCameraView, got: %@", view);
         }
         [view toggleFlashlight:flashType];
     }];
@@ -63,7 +64,7 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
     [self.bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, RCTSparseArray *viewRegistry) {
         id view = viewRegistry[reactTag];
         if (![view isKindOfClass:[MyCameraView class]]) {
-            RCTLogError(@"Invalid view returned from registry, expecting RKWebView, got: %@", view);
+            RCTLogError(@"Invalid view returned from registry, expecting MyCameraView, got: %@", view);
         }
         // register for finish takePhoto notification
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(takePhotoFinishHandler:)
@@ -76,14 +77,17 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
 - (void)sharePhoto:(NSString*)text positionY:(int)posY{
     RCT_EXPORT();
     
-    //NSLog(@"text:%@  posY:%d", text, posY);
+    //DebugLog(@"text:%@  posY:%d", text, posY);
     
     // generate image with user input text as water mark
     NSString *filePath = [Utility getDocumentFilePath:PHOTO_NAME];
     UIImage *image = [UIImage imageWithContentsOfFile:filePath];
     
     UIImage *imageWithText = [self drawText:text inImage:image atPoint:(CGPoint){0,posY}];
-    UIImageWriteToSavedPhotosAlbum(imageWithText, nil, nil, nil);
+    
+    if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityImage) {
+        [FBSDKMessengerSharer shareImage:imageWithText withOptions:nil];
+    }
 }
 
 - (void)checkFlashLightSupport:(int)cameraType callback:(RCTResponseSenderBlock)callback
@@ -103,22 +107,13 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
     BOOL result = [notif.object boolValue];
     if (result){
         NSString *filePath = [Utility getDocumentFilePath:PHOTO_NAME];
-        //RCTLogInfo(@"takePhotoFinishHandler %@", filePath);
-        NSURL *url = [[NSURL alloc] initFileURLWithPath:filePath];
+        //DebugLog(@"filePath filePath %@", filePath);
         [self.bridge.eventDispatcher sendDeviceEventWithName:@"takePhotoFinishData"
-                                                        body:@{@"name": url.absoluteString}];
+                                                        body:@{@"name": filePath}];
         [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@""]]];
     } else {
         // show ERROR alert or something
     }
-}
-
-- (BOOL)saveImageToFile:(UIImage*)image{
-    // Create path.
-    NSString *filePath = [Utility getDocumentFilePath:PHOTO_NAME];
-    NSLog(@"filePath filePath filePath filePath %@", filePath);
-    // Save image.
-    return [UIImageJPEGRepresentation(image, 100) writeToFile:filePath atomically:YES];
 }
 
 static const int TextHeight = 36;

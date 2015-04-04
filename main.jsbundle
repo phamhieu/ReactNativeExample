@@ -1097,7 +1097,7 @@ var SnapChatProject = React.createClass({displayName: "SnapChatProject",
     }
     
     return(
-      React.createElement(Image, {source: {uri: this.state.takenPhotoURI}, 
+      React.createElement(Image, {source: {uri: this.state.takenPhotoURI, isStatic: true}, 
              style: styles.thumbnail}, 
         inputText, 
         text

@@ -161,7 +161,7 @@ var SnapChatProject = React.createClass({
     }
     
     return(
-      <Image source={{uri: this.state.takenPhotoURI}}
+      <Image source={{uri: this.state.takenPhotoURI, isStatic: true}}
              style={styles.thumbnail}> 
         {inputText}
         {text}

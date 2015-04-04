@@ -20,11 +20,14 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		2831DF0A1ACA91AF001FC842 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 2831DF091ACA91AF001FC842 /* main.jsbundle */; };
+		28471ADA1ACF867B002AF4FE /* fakeCaptureImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 28471AD91ACF867B002AF4FE /* fakeCaptureImage.png */; };
+		28471AE01ACF8683002AF4FE /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28471ADD1ACF8683002AF4FE /* MyCameraView.m */; };
+		28471AE11ACF8683002AF4FE /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28471ADF1ACF8683002AF4FE /* Utility.m */; };
+		28471AF11ACF9246002AF4FE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28471AEE1ACF9246002AF4FE /* Bolts.framework */; };
+		28471AF21ACF9246002AF4FE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28471AEF1ACF9246002AF4FE /* FBSDKCoreKit.framework */; };
+		28471AF31ACF9246002AF4FE /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28471AF01ACF9246002AF4FE /* FBSDKMessengerShareKit.framework */; };
+		28471AF51ACF98A2002AF4FE /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 28471AF41ACF98A2002AF4FE /* main.jsbundle */; };
 		28BBE1871AC8EC8100669E44 /* MyCameraViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1861AC8EC8100669E44 /* MyCameraViewManager.m */; };
-		28BBE1931AC8F51800669E44 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1921AC8F51800669E44 /* MyCameraView.m */; };
-		28BBE1B81AC981E700669E44 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1B71AC981E700669E44 /* Utility.m */; };
-		28BBE1E01ACA610800669E44 /* fakeCaptureImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -111,14 +114,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = iOS/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = iOS/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2831DF091ACA91AF001FC842 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		28471AD91ACF867B002AF4FE /* fakeCaptureImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakeCaptureImage.png; sourceTree = "<group>"; };
+		28471ADC1ACF8683002AF4FE /* MyCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
+		28471ADD1ACF8683002AF4FE /* MyCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
+		28471ADE1ACF8683002AF4FE /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		28471ADF1ACF8683002AF4FE /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		28471AEC1ACF8E89002AF4FE /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		28471AEE1ACF9246002AF4FE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		28471AEF1ACF9246002AF4FE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		28471AF01ACF9246002AF4FE /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
+		28471AF41ACF98A2002AF4FE /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		28BBE1851AC8EC8100669E44 /* MyCameraViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCameraViewManager.h; path = iOS/MyCameraViewManager.h; sourceTree = "<group>"; };
 		28BBE1861AC8EC8100669E44 /* MyCameraViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCameraViewManager.m; path = iOS/MyCameraViewManager.m; sourceTree = "<group>"; };
-		28BBE1911AC8F51800669E44 /* MyCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCameraView.h; sourceTree = "<group>"; };
-		28BBE1921AC8F51800669E44 /* MyCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
-		28BBE1B61AC981E700669E44 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
-		28BBE1B71AC981E700669E44 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakeCaptureImage.png; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,13 +135,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				00481BEA1AC0C89D00671115 /* libicucore.dylib in Frameworks */,
+				28471AF21ACF9246002AF4FE /* FBSDKCoreKit.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00481BE81AC0C86700671115 /* libRCTWebSocketDebugger.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E61ABCBA2D00DB3ED1 /* libRCTAdSupport.a in Frameworks */,
+				28471AF31ACF9246002AF4FE /* FBSDKMessengerShareKit.framework in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				28471AF11ACF9246002AF4FE /* Bolts.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 			);
@@ -202,20 +212,19 @@
 		13B07FAE1A68108700A75B9A /* SnapChatProject */ = {
 			isa = PBXGroup;
 			children = (
-				2831DF091ACA91AF001FC842 /* main.jsbundle */,
-				28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */,
-				28BBE1911AC8F51800669E44 /* MyCameraView.h */,
-				28BBE1921AC8F51800669E44 /* MyCameraView.m */,
+				28471AF41ACF98A2002AF4FE /* main.jsbundle */,
+				28471AED1ACF9246002AF4FE /* FBframework */,
+				28471AD81ACF867B002AF4FE /* image */,
+				28471ADB1ACF8683002AF4FE /* code */,
 				28BBE1851AC8EC8100669E44 /* MyCameraViewManager.h */,
 				28BBE1861AC8EC8100669E44 /* MyCameraViewManager.m */,
-				28BBE1B61AC981E700669E44 /* Utility.h */,
-				28BBE1B71AC981E700669E44 /* Utility.m */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				28471AEC1ACF8E89002AF4FE /* Prefix.pch */,
 			);
 			name = SnapChatProject;
 			sourceTree = "<group>";
@@ -226,6 +235,37 @@
 				146834041AC3E56700842450 /* libReact.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		28471AD81ACF867B002AF4FE /* image */ = {
+			isa = PBXGroup;
+			children = (
+				28471AD91ACF867B002AF4FE /* fakeCaptureImage.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		28471ADB1ACF8683002AF4FE /* code */ = {
+			isa = PBXGroup;
+			children = (
+				28471ADC1ACF8683002AF4FE /* MyCameraView.h */,
+				28471ADD1ACF8683002AF4FE /* MyCameraView.m */,
+				28471ADE1ACF8683002AF4FE /* Utility.h */,
+				28471ADF1ACF8683002AF4FE /* Utility.m */,
+			);
+			name = code;
+			path = iOS/code;
+			sourceTree = "<group>";
+		};
+		28471AED1ACF9246002AF4FE /* FBframework */ = {
+			isa = PBXGroup;
+			children = (
+				28471AEE1ACF9246002AF4FE /* Bolts.framework */,
+				28471AEF1ACF9246002AF4FE /* FBSDKCoreKit.framework */,
+				28471AF01ACF9246002AF4FE /* FBSDKMessengerShareKit.framework */,
+			);
+			name = FBframework;
+			path = iOS/FBframework;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -427,9 +467,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				28471ADA1ACF867B002AF4FE /* fakeCaptureImage.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				28BBE1E01ACA610800669E44 /* fakeCaptureImage.png in Resources */,
-				2831DF0A1ACA91AF001FC842 /* main.jsbundle in Resources */,
+				28471AF51ACF98A2002AF4FE /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,9 +482,9 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				28BBE1B81AC981E700669E44 /* Utility.m in Sources */,
+				28471AE11ACF8683002AF4FE /* Utility.m in Sources */,
 				28BBE1871AC8EC8100669E44 /* MyCameraViewManager.m in Sources */,
-				28BBE1931AC8F51800669E44 /* MyCameraView.m in Sources */,
+				28471AE01ACF8683002AF4FE /* MyCameraView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +508,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hieu Pham Trung (AW4LDHKXXT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS/FBframework",
+				);
+				GCC_PREFIX_HEADER = iOS/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -486,6 +532,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hieu Pham Trung (AW4LDHKXXT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/iOS/FBframework",
+				);
+				GCC_PREFIX_HEADER = iOS/Prefix.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
