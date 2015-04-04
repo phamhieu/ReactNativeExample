@@ -176,6 +176,7 @@ var SnapChatProject = React.createClass({
     return (<TextInput 
                 style={styles.input}
                 value = {content}
+                autoFocus = {true}
                 onChangeText = {(text) => this.setState({'inputText': text}) }
                 onEndEditing = {() => this.setState({'showTextInput': false}) } >
               </TextInput>);
