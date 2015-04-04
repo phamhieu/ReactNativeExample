@@ -15,6 +15,4 @@
 
 @property (nonatomic, strong) UIWindow *window;
 
-- (void)shareByEmail:(UIImage*)image;
-
 @end

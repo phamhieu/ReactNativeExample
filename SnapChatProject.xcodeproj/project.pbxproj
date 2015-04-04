@@ -24,7 +24,7 @@
 		28BBE1871AC8EC8100669E44 /* MyCameraViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1861AC8EC8100669E44 /* MyCameraViewManager.m */; };
 		28BBE1931AC8F51800669E44 /* MyCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1921AC8F51800669E44 /* MyCameraView.m */; };
 		28BBE1B81AC981E700669E44 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BBE1B71AC981E700669E44 /* Utility.m */; };
-		28BBE1E01ACA610800669E44 /* fakeTextImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BBE1DF1ACA610800669E44 /* fakeTextImage.png */; };
+		28BBE1E01ACA610800669E44 /* fakeCaptureImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -118,7 +118,7 @@
 		28BBE1921AC8F51800669E44 /* MyCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCameraView.m; sourceTree = "<group>"; };
 		28BBE1B61AC981E700669E44 /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		28BBE1B71AC981E700669E44 /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
-		28BBE1DF1ACA610800669E44 /* fakeTextImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakeTextImage.png; sourceTree = "<group>"; };
+		28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fakeCaptureImage.png; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				2831DF091ACA91AF001FC842 /* main.jsbundle */,
-				28BBE1DF1ACA610800669E44 /* fakeTextImage.png */,
+				28BBE1DF1ACA610800669E44 /* fakeCaptureImage.png */,
 				28BBE1911AC8F51800669E44 /* MyCameraView.h */,
 				28BBE1921AC8F51800669E44 /* MyCameraView.m */,
 				28BBE1851AC8EC8100669E44 /* MyCameraViewManager.h */,
@@ -428,7 +428,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				28BBE1E01ACA610800669E44 /* fakeTextImage.png in Resources */,
+				28BBE1E01ACA610800669E44 /* fakeCaptureImage.png in Resources */,
 				2831DF0A1ACA91AF001FC842 /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SnapChatProject;
-				PROVISIONING_PROFILE = "162b0740-cf0a-409e-9365-2faede28c472";
+				PROVISIONING_PROFILE = "05df8b11-e639-4494-8100-ef599d65e0f0";
 			};
 			name = Debug;
 		};
@@ -495,7 +495,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = SnapChatProject;
-				PROVISIONING_PROFILE = "162b0740-cf0a-409e-9365-2faede28c472";
+				PROVISIONING_PROFILE = "05df8b11-e639-4494-8100-ef599d65e0f0";
 			};
 			name = Release;
 		};
@@ -542,7 +542,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "162b0740-cf0a-409e-9365-2faede28c472";
+				PROVISIONING_PROFILE = "05df8b11-e639-4494-8100-ef599d65e0f0";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -583,7 +583,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "162b0740-cf0a-409e-9365-2faede28c472";
+				PROVISIONING_PROFILE = "05df8b11-e639-4494-8100-ef599d65e0f0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

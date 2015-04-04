@@ -141,7 +141,15 @@
     if ([videoConnection isVideoMirroringSupported]) {
         [videoConnection setVideoMirrored:[self doesVideoMirrored]];
     }
-    
+#if TARGET_IPHONE_SIMULATOR
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *fakeImage = [UIImage imageNamed:@"fakeCaptureImage.png"];
+        BOOL saveSuccessfully = [self saveImageToFile:fakeImage];
+        // notify take photo finish
+        [[NSNotificationCenter defaultCenter] postNotificationName:TAKE_PHOTO_FINISH
+                                                            object:[NSNumber numberWithBool:saveSuccessfully]];
+    });
+#else
     [_stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler:
      ^(CMSampleBufferRef imageDataSampleBuffer, NSError *error){
            if (!imageDataSampleBuffer) return;
@@ -159,6 +167,7 @@
                }];
            });
        }];
+#endif
 }
 
 - (BOOL)saveImageToFile:(UIImage*)image{
