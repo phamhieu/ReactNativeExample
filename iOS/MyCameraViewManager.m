@@ -87,6 +87,10 @@ RCT_EXPORT_VIEW_PROPERTY(cameraType, CameraType);
     
     if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityImage) {
         [FBSDKMessengerSharer shareImage:imageWithText withOptions:nil];
+    } else {
+        // Messenger isn't installed. Redirect the person to the App Store.
+        NSString *iTunesLink = @"itms://itunes.apple.com/us/app/facebook-messenger/id454638411?mt=8";
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
     }
 }
 
