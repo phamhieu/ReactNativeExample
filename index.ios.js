@@ -109,7 +109,7 @@ var SnapChatProject = React.createClass({
     var photoImage = this.renderPhoto();
 
     var topBar = this.renderTopBar(this.resetUIToRetakePhoto, 'Re-take', this.addText, 'Add Text');
-    var bottomBar = this.renderBottomBar(this.sharePhoto, 'Share');
+    var bottomBar = this.renderBottomBar(this.sharePhoto, require('image!send_btn'));
 
     return (
       <View style={styles.container}>
@@ -128,7 +128,7 @@ var SnapChatProject = React.createClass({
       topBar = this.renderTopBar(this.flipCamera, flipCameraText, this.flashToggle, flashToggleText);
     }
 
-    var bottomBar = this.renderBottomBar(this.takePhoto, 'Take Photo');
+    var bottomBar = this.renderBottomBar(this.takePhoto, require('image!takephoto_btn'));
     var cameraView = <MyCameraView ref={CAMERA_REF} style={styles.cameraContainer}/>;
 
     return (
@@ -201,8 +201,8 @@ var SnapChatProject = React.createClass({
     );
   },
 
-  renderBottomBar: function(action, text) {
-    var button = this.renderUtilButton(action, text);
+  renderBottomBar: function(action, buttonImage) {
+    var button = this.renderUtilImageButton(action, buttonImage);
 
     return (
       <View style={styles.bottomBarRow}>
@@ -221,6 +221,17 @@ var SnapChatProject = React.createClass({
         </View>
       </TouchableOpacity>
     );
+  },
+
+  renderUtilImageButton: function(action, buttonImage){
+    return (
+      <TouchableOpacity onPress={action}>
+        <Image
+          style={styles.imageButton}
+          source={buttonImage}
+        />
+      </TouchableOpacity>
+      );
   },
 
   getCameraViewHandle: function(): any {
@@ -378,15 +389,9 @@ var styles = StyleSheet.create({
     borderColor: 'transparent',
     borderRadius: 3,
   },
-  disabledButton: {
-    width: 100,
-    padding: 3,
-    marginRight: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: DISABLED_WASH,
-    borderColor: 'transparent',
-    borderRadius: 3,
+  imageButton: {
+    width: 50,
+    height: 50,
   },
   thumbnail: {
     height: SCREEN_WIDTH,
