@@ -174,7 +174,7 @@ var SnapChatProject = React.createClass({
     if (this.state.inputText) content = this.state.inputText;
 
     return (<TextInput 
-                style={styles.input}
+                style={styles.inputText}
                 value = {content}
                 autoFocus = {true}
                 onChangeText = {(text) => this.setState({'inputText': text}) }
@@ -401,7 +401,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'white',
   },
-  input: {
+  inputText: {
     height: 28,
     width: SCREEN_WIDTH,
     backgroundColor: TEXT_BG,
